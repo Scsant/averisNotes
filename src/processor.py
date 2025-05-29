@@ -9,7 +9,9 @@ def tratar_dados(df_averis: pd.DataFrame, lista_df_fazendas: list[pd.DataFrame],
     Adiciona colunas 'Situação' e 'Status da Verificação'.
     Garante tratamento robusto para campos OBS e fallback para datas.
     """
+    df_averis.columns = [col.strip().upper() for col in df_averis.columns]
     df_resultado = df_averis.copy()
+
     situacoes = []
     status_verificacao = []
 
