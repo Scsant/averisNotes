@@ -45,7 +45,7 @@ def tratar_dados(df_averis: pd.DataFrame, lista_df_fazendas: list[pd.DataFrame],
 
     # Loop nas NFs da Averis
     for idx, row in df_resultado.iterrows():
-        numero_nf = row['Nº NF-e']
+        numero_nf = row['Nº NF-E']
         projeto = str(row['PROJETO']).strip().upper()
         uf_emissor = str(row['UF EMISSOR']).strip().upper()
 
