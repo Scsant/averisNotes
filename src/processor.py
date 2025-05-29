@@ -44,8 +44,9 @@ def tratar_dados(df_averis: pd.DataFrame, lista_df_fazendas: list[pd.DataFrame],
     # Loop nas NFs da Averis
     for idx, row in df_resultado.iterrows():
         numero_nf = row['Nº NF-e']
-        projeto = str(row['Projeto']).strip().upper()
-        uf_emissor = str(row['UF emissor']).strip().upper()
+        projeto = str(row['PROJETO']).strip().upper()
+        uf_emissor = str(row['UF EMISSOR']).strip().upper()
+
 
         obs_encontrada = "em trânsito"
         encontrado = False
